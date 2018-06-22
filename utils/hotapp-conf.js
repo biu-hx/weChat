@@ -1,0 +1,1 @@
+exports.hotAppKey = "hotapp402743586", exports.wxAuth = "0", exports.appVer = "0.1.0";

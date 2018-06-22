@@ -1,0 +1,46 @@
+<import src="/pages/template/template.wxml"></import>
+<template is="step" data="{{...item}}"></template>
+<form bindsubmit="nextPage">
+    <view class="intWrap">
+        <view class="row">
+            <view class="flex">
+                <text class="objName">实习/工作经验:</text>
+                <picker bindchange="bindPickerChange" class="select" name="wrok" range="{{array}}" value="{{index}}">
+                    <view class="picker">{{array[index]}}</view>
+                    <image class="icon_tran" src="/pages/images/icon_tran.png"></image>
+                </picker>
+            </view>
+            <view class="textInt_box">
+                <textarea class="textInt" maxlength="-1" name="live" placeholder="请如实填写跟申请方向相关的工作经验，若没有完整工作经验，请填写相关实习经验" placeholderClass="int_hint" showConfirmBar=""></textarea>
+            </view>
+        </view>
+        <view class="row">
+            <text class="objName">项目经验:</text>
+            <view class="textInt_box">
+                <textarea class="textInt" maxlength="-1" name="project" placeholder="请如实填写跟申请方向相关的项目经验，如比赛经历，商业项目，试验项目， 论文发表等" placeholderClass="int_hint" showConfirmBar=""></textarea>
+            </view>
+        </view>
+        <view class="row">
+            <text class="objName">海外留学:</text>
+            <view class="textInt_box">
+                <textarea class="textInt" maxlength="-1" name="studyTour" placeholder="请如实填写海外游学经验，如交换项目，海外实践课程等。若没有可不填" placeholderClass="int_hint" showConfirmBar=""></textarea>
+            </view>
+        </view>
+        <view class="row">
+            <text class="objName">公益活动:</text>
+            <view class="textInt_box">
+                <textarea class="textInt" maxlength="-1" name="active" placeholder="请如实填写所参与公益项目若没有可不填" placeholderClass="int_hint" showConfirmBar=""></textarea>
+            </view>
+        </view>
+        <view class="row">
+            <text class="objName">获奖经历:</text>
+            <view class="textInt_box">
+                <textarea class="textInt" maxlength="-1" name="price" placeholder="请如实填写获奖经历，若没有可不填" placeholderClass="int_hint" showConfirmBar=""></textarea>
+            </view>
+        </view>
+        <view class="nextBtn_box">
+            <button bindtap="reBack" class="nextBtn">上一步</button>
+            <button class="nextBtn" formType="submit">下一步</button>
+        </view>
+    </view>
+</form>

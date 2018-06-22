@@ -1,0 +1,111 @@
+<loading hidden="{{loading}}">
+  加载中...
+</loading>
+<view class="info">
+    <view class="scoreBox">
+        <image class="jzImg" mode="widthFix" src="/pages/images/jzImg.png"></image>
+        <view style="padding:25rpx 5rpx 20rpx;">
+            <text class="username" wx:if="{{nickname!=''}}">{{nickname}}</text>
+            <text style="font-size:44rpx;">你的得分</text>
+        </view>
+        <view class="scoreData">
+            <text class="score">{{score}}</text>
+            <image class="circle" src="/pages/images/circle.png"></image>
+        </view>
+        <view>
+            <text class="tit">以下是你的智能选校报告</text>
+        </view>
+        <view class="hintBox">
+            <view class="hintLeft">
+                <image class="laba" src="/pages/images/laba.png"></image>
+            </view>
+            <view class="hintRight">
+                <view class="hintList" wx:for="{{hint}}" wx:key="hintText">
+                    <image class="point" src="/pages/images/point.png"></image>
+                    <text class="hintText">{{item.hintText}}</text>
+                </view>
+            </view>
+        </view>
+    </view>
+</view>
+<view class="titBar">
+    <image class="titBg" src="/pages/images/titBar.png"></image>
+    <text class="titName">背景条件分析</text>
+</view>
+<view class="bgBox">
+    <view class="itemBox">
+        <view class="bgItem" wx:if="{{bgExport.school}}">
+            <view class="tag {{bgExport.school.type==1?'green tagNice':'red tagBad'}}">{{bgExport.school.type==1?'优势':'劣势'}}</view>
+            <view class="tagInfo">
+                <text class="tagTit">院校背景：</text>
+                <text>{{bgExport.school.name}}院校，打败了<text class="num {{bgExport.school.type==1?'green':'red'}}">{{bgExport.school.num}}</text>位测评者</text>
+            </view>
+        </view>
+        <view class="bgItem" wx:if="{{bgExport.gpa}}">
+            <view class="tag {{bgExport.gpa.type==1?'green tagNice':'red tagBad'}}">{{bgExport.gpa.type==1?'优势':'劣势'}}</view>
+            <view class="tagInfo">
+                <text class="tagTit">GPA：</text>
+                <text>{{bgExport.gpa.score}}，打败了<text class="num {{bgExport.gpa.type==1?'green':'red'}}">{{bgExport.gpa.num}}</text>位测评者</text>
+            </view>
+        </view>
+        <view class="bgItem" wx:if="{{bgExport.gmat}}">
+            <view class="tag {{bgExport.gmat.type==1?'green tagNice':'red tagBad'}}">{{bgExport.gmat.type==1?'优势':'劣势'}}</view>
+            <view class="tagInfo">
+                <text class="tagTit">GMAT：</text>
+                <text>{{bgExport.gmat.score}}，打败了<text class="num {{bgExport.gmat.type==1?'green':'red'}}">{{bgExport.gmat.num}}</text>位测评者</text>
+            </view>
+        </view>
+        <view class="bgItem" wx:if="{{bgExport.toefl}}">
+            <view class="tag {{bgExport.toefl.type==1?'green tagNice':'red tagBad'}}">{{bgExport.toefl.type==1?'优势':'劣势'}}</view>
+            <view class="tagInfo">
+                <text class="tagTit">TOEFL：</text>
+                <text>{{bgExport.toefl.score}}，打败了<text class="num {{bgExport.toefl.type==1?'green':'red'}}">{{bgExport.toefl.num}}</text>位测评者</text>
+            </view>
+        </view>
+        <view class="bgItem" wx:if="{{bgExport.work}}">
+            <view class="tag tagBad {{bgExport.work.type==1?'green':'red'}}">{{bgExport.work.type==1?'优势':'劣势'}}</view>
+            <view class="tagInfo">
+                <text class="tagTit">个人经历：</text>
+                <text>进入{{bgExport.work.name}}实习，打败了<text class="num {{bgExport.work.type==1?'green':'red'}}">{{bgExport.work.num}}</text>位测评者</text>
+            </view>
+        </view>
+    </view>
+    <view class="exportBox">
+        <view class="resnUum">
+            <view class="resTit">
+                <text>你的背景条件符合</text>
+            </view>
+            <view class="resData">
+                <text>{{schoolNum}}+</text>
+            </view>
+            <view class="resTit2">
+                <text>所开设<text class="green">{{majorName}}</text>专业院校的申请要求</text>
+            </view>
+        </view>
+        <view class="handle">
+            <button class="handleBtn share" hoverClass="tapBtn" openType="share">炫耀一下</button>
+            <button bindtap="reBack" class="handleBtn" hoverClass="tapBtn">重新评估</button>
+        </view>
+    </view>
+</view>
+<view class="titBar" wx:if="{{schoolNum>0}}">
+    <image class="titBg" src="/pages/images/titBar.png"></image>
+    <text class="titName">以下是你的选校报告</text>
+</view>
+<view class="schoolBox" wx:for="{{school}}" wx:key="id">
+    <view class="schoolItem">
+        <image class="scImg" mode="widthFix" src="http://schools.smartapply.cn{{item.image}}"></image>
+        <view class="scInfo ellipsis">
+            <view class="chName">
+                <text>{{item.name}}</text>
+            </view>
+            <view class="enName ellipsis">
+                <text>{{item.title}}</text>
+            </view>
+            <view class="addres ellipsis">
+                <image class="gps" mode="widthFix" src="/pages/images/gps.png"></image>
+                <text>所在地区：{{item.place}}</text>
+            </view>
+        </view>
+    </view>
+</view>

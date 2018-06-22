@@ -1,0 +1,14 @@
+<view class="section_wrap flex-container">
+    <view class="section flex-container">
+        <view class="select_left">
+            <view class="tapIcon">
+                <image mode="aspectFit" src="/pages/images/1.png" style="width: 160rpx; height: 160rpx; "></image>
+            </view>
+            <text class="setitle">选校测评</text>
+        </view>
+        <view class="select_right">
+            <button bindtap="detail" class="selBtn details" hoverClass="active" size="mini">查看详情</button>
+            <button bindtap="enterPage" class="selBtn enter" hoverClass="active" size="mini">参加测评</button>
+        </view>
+    </view>
+</view>

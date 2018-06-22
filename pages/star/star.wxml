@@ -1,0 +1,3 @@
+<button bindtap="naviget" class="starLink">
+    <image class="star_1" src="/pages/images/star.png"></image>
+</button>

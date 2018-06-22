@@ -1,0 +1,14 @@
+<loading hidden="{{loading}}">
+  加载中...
+</loading>
+<view class="listBox">
+
+  <view class="listItem_wrap" wx:for="{{dataList}}" wx:key="id">
+    <view class="majorName">专业：{{item.majorName}}</view>
+    <view class="listItem">
+      <text class="score">分数：{{item.score}}分</text>
+      <text class="time">{{date[index]}}</text>
+      <navigator class="detail" hoverClass="tap" url="../result/result?id={{item.id}}">查看详情</navigator>
+    </view>
+  </view>
+</view>

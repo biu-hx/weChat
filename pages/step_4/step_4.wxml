@@ -1,0 +1,36 @@
+<import src="/pages/template/template.wxml"></import>
+<template is="step" data="{{...item}}"></template>
+<view class="intWrap">
+    <view class="box_item">
+        <form bindsubmit="toResult">
+            <view class="intParentBox">
+                <view class="intChidbox">
+                    <view class="hintBox">
+                        <text class="must">*</text>
+                        <text class="bigName">留学目的地:</text>
+                        <text class="nameDe"></text>
+                    </view>
+                    <picker bindchange="bindPickerChange" class="select" name="destination" range="{{destination}}" rangeKey="name" value="{{index}}">
+                        <view class="picker">{{destination[index].name}}</view>
+                        <image class="icon_tran" src="/pages/images/icon_tran.png"></image>
+                    </picker>
+                </view>
+                <view class="intChidbox">
+                    <view class="hintBox">
+                        <text class="must">*</text>
+                        <text class="bigName">专业:</text>
+                        <text class="nameDe"></text>
+                    </view>
+                    <picker bindchange="bindMultiPickerChange" bindcolumnchange="bindMultiPickerColumnChange" class="select" mode="multiSelector" name="majorName" range="{{multiArray}}" value="{{multiIndex}}">
+                        <view class="picker">{{multiArray[0][ multiIndex[0] ]}} - {{multiArray[1][ multiIndex[1] ]}}</view>
+                        <image class="icon_tran" src="/pages/images/icon_tran.png"></image>
+                    </picker>
+                </view>
+            </view>
+            <view class="nextBtn_box">
+                <button bindtap="reBack" class="nextBtn">上一步</button>
+                <button class="nextBtn" formType="submit">提交</button>
+            </view>
+        </form>
+    </view>
+</view>

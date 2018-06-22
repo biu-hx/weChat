@@ -1,0 +1,37 @@
+<import src="/pages/template/template.wxml"></import>
+<template is="step" data="{{...item}}"></template>
+<view class="intWrap">
+    <form bindsubmit="nextPage">
+        <view class="box_item">
+            <view class="intParentBox">
+                <view class="intChidbox">
+                    <view class="hintBox">
+                        <text class="must">*</text>
+                        <text class="bigName">GPA:</text>
+                        <text class="nameDe">例如3.0或85</text>
+                    </view>
+                    <input class="intText" name="gpaVal" value="{{gpaVal}}"></input>
+                </view>
+                <view class="intChidbox">
+                    <view class="hintBox">
+                        <text class="must"></text>
+                        <text class="bigName">GMAT/GRE:</text>
+                        <text class="nameDe">若暂未出分，可填目标分数</text>
+                    </view>
+                    <input class="intText" name="gmatVal" value="{{gmatVal}}"></input>
+                </view>
+                <view class="intChidbox">
+                    <view class="hintBox">
+                        <text class="must">*</text>
+                        <text class="bigName">TOEFL/IELTS:</text>
+                        <text class="nameDe">若暂未出分，可填目标分数</text>
+                    </view>
+                    <input class="intText" name="toeflVal" value="{{toeflVal}}"></input>
+                </view>
+            </view>
+            <view class="nextBtn_box">
+                <button class="nextBtn" formType="submit">下一步</button>
+            </view>
+        </view>
+    </form>
+</view>

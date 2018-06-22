@@ -1,0 +1,107 @@
+.banner_bg {
+    width: 100%;
+    height: 400rpx;
+    position: relative;
+    background-size: 100% 100%;
+}
+
+.banner_src {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    zoom: 1;
+    z-index: -1;
+}
+
+.text_wrap {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.banner_text {
+    color: #fff;
+    font-family: 'Microsoft YaHei';
+}
+
+.text_1 {
+    padding: 35rpx 0 25rpx;
+    font-size: 36rpx;
+}
+
+.text_2 {
+    font-size: 26rpx;
+}
+
+.step_wrap {
+    display: flex;
+    margin-top: 100rpx;
+    flex-flow: row wrap;
+    justify-content: space-between;
+}
+
+.step_item {
+    position: relative;
+    background: #fff;
+    height: 10rpx;
+    text-align: center;
+}
+
+.step_1 {
+    width: 30%;
+}
+
+.step_conmen {
+    width: 25%;
+}
+
+.step_4 {
+    width: 20%;
+}
+
+.sn_1 {
+    left: 50%;
+    top: 50%;
+    margin-left: -40rpx;
+    margin-top: -20rpx;
+}
+
+.sn_conmmen {
+    left: 0;
+    top: 50%;
+    margin-top: -20rpx;
+}
+
+.step_index {
+    position: absolute;
+    text-align: center;
+    width: 34rpx;
+    height: 34rpx;
+    border-radius: 50%;
+    color: #777;
+    background: #fff;
+    font-size: 26rpx;
+    border: 6rpx solid #c7c7c7;
+}
+
+.step_name {
+    display: block;
+    padding-top: 50rpx;
+    font-size: 22rpx;
+    color: #fff;
+}
+
+.item_on {
+    background: #74951a;
+}
+
+.step_on {
+    color: #74951a;
+    border-color: #74951a;
+}
+
+.step_name_on {
+    color: #74951a;
+}

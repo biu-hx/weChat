@@ -1,0 +1,21 @@
+{
+    "pages": [
+        "pages/star/star",
+        "pages/index/index",
+        "pages/list/list",
+        "pages/login/login",
+        "pages/foundPassword/foundPassword",
+        "pages/register/register",
+        "pages/step_1/step_1",
+        "pages/step_2/step_2",
+        "pages/step_3/step_3",
+        "pages/step_4/step_4",
+        "pages/result/result"
+    ],
+    "window": {
+        "navigationBarBackgroundColor": "#98bc36",
+        "backgroundTextStyle": "light",
+        "navigationBarTitleText": "雷哥留学选校测评",
+        "navigationBarTextStyle": "white"
+    }
+}

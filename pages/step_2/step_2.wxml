@@ -1,0 +1,55 @@
+<import src="/pages/template/template.wxml"></import>
+<template is="step" data="{{...item}}"></template>
+<view class="intWrap">
+    <view class="box_item">
+        <form bindsubmit="nextPage">
+            <view class="intParentBox">
+                <view class="intChidbox">
+                    <view class="hintBox">
+                        <text class="must">*</text>
+                        <text class="bigName">目前学历:</text>
+                        <text class="nameDe"></text>
+                    </view>
+                    <picker bindchange="bindPickerChange_a" class="select" name="eduLv" range="{{edLv}}" value="{{indexLv}}">
+                        <view class="picker">{{edLv[indexLv]}}</view>
+                        <image class="icon_tran" src="/pages/images/icon_tran.png"></image>
+                    </picker>
+                </view>
+                <view class="intChidbox">
+                    <view class="hintBox">
+                        <text class="must">*</text>
+                        <text class="bigName">就读/毕业 院校:</text>
+                        <text class="nameDe"></text>
+                    </view>
+                    <picker bindchange="bindPickerChange_b" class="select" name="schoolLv" range="{{schoolItem}}" value="{{indexSc}}">
+                        <view class="picker">{{schoolItem[indexSc]}}</view>
+                        <image class="icon_tran" src="/pages/images/icon_tran.png"></image>
+                    </picker>
+                </view>
+                <view class="intChidbox">
+                    <view class="hintBox">
+                        <text class="must">*</text>
+                        <text class="bigName">详细填写学校名称:</text>
+                        <text class="nameDe"></text>
+                    </view>
+                    <input class="intText" name="schoolName"></input>
+                </view>
+                <view class="intChidbox" style="margin-bottom:0;">
+                    <view class="hintBox">
+                        <text class="must">*</text>
+                        <text class="bigName">专业:</text>
+                        <text class="nameDe"></text>
+                    </view>
+                    <picker bindchange="bindMultiPickerChange" bindcolumnchange="bindMultiPickerColumnChange" class="select" mode="multiSelector" name="majorName" range="{{multiArray}}" value="{{multiIndex}}">
+                        <view class="picker">{{multiArray[0][ multiIndex[0] ]}} - {{multiArray[1][ multiIndex[1] ]}}</view>
+                        <image class="icon_tran" src="/pages/images/icon_tran.png"></image>
+                    </picker>
+                </view>
+            </view>
+            <view class="nextBtn_box">
+                <button bindtap="reBack" class="nextBtn">上一步</button>
+                <button class="nextBtn" formType="submit">下一步</button>
+            </view>
+        </form>
+    </view>
+</view>
