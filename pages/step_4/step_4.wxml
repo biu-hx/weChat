@@ -10,6 +10,7 @@
                         <text class="bigName">留学目的地:</text>
                         <text class="nameDe"></text>
                     </view>
+
                     <picker bindchange="bindPickerChange" class="select" name="destination" range="{{destination}}" rangeKey="name" value="{{index}}">
                         <view class="picker">{{destination[index].name}}</view>
                         <image class="icon_tran" src="/pages/images/icon_tran.png"></image>
